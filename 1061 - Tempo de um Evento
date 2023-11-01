@@ -1,0 +1,38 @@
+# Entrada
+di = input().split(" ")
+w = int(di[1])
+
+hi = input().split(" ")
+x = int(hi[0])
+y = int(hi[2])
+z = int(hi[4])
+
+df = input().split(" ")
+w1 = int(df[1])
+
+hf = input().split(" ")
+x1 = int(hf[0])
+y1 = int(hf[2])
+z1 = int(hf[4])
+
+# Cálculos
+total_segundos_inicial = z + 60 * y + 3600 * x + 86400 * w
+total_segundos_final = z1 + 60 * y1 + 3600 * x1 + 86400 * w1
+
+diferenca_segundos = total_segundos_final - total_segundos_inicial
+
+# Dia, hora, minuto e segundo
+dia = diferenca_segundos // 86400
+diferenca_segundos %= 86400
+
+hora = diferenca_segundos // 3600
+diferenca_segundos %= 3600
+
+minuto = diferenca_segundos // 60
+segundos = diferenca_segundos % 60
+
+# Saída
+print("%d dia(s)" % dia)
+print("%d hora(s)" % hora)
+print("%d minuto(s)" % minuto)
+print("%d segundo(s)" % segundos)
