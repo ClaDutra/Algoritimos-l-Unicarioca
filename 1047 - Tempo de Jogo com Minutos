@@ -1,0 +1,16 @@
+st, sm, et, em = list(map(int, input().split()))
+
+if em < sm:
+    em += 60
+    et -= 1
+
+if et < st:
+    et += 24
+
+ft = et - st
+fm = em - sm
+
+if et == st and em == sm:
+    print("O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)")
+else:
+    print("O JOGO DUROU {} HORA(S) E {} MINUTO(S)".format(ft, fm))
